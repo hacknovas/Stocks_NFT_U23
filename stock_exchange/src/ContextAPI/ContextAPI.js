@@ -8,7 +8,7 @@ export default function Provider({ children }) {
 
   return (
     <conApp.Provider
-      value={{ userAdd, setUserAdd, constractDetails, setConstractDetails }}
+      value={{userAdd, setUserAdd, constractDetails, setConstractDetails}}
     >
       {children}
     </conApp.Provider>

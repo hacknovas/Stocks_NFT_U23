@@ -47,15 +47,22 @@ function Navbar() {
         </div>
         <div class="btn_div">
           {userAdd == "" ? (
-            <button class="btn btn-sm my-4 mx-4" onClick={handleConnection}>
-              Connect To Wallet
-            </button>
+            <div>
+              <button class="btn btn-sm my-4 mx-4" onClick={handleConnection}>
+                Connect To Wallet
+              </button>
+            </div>
           ) : (
-            <button class="btn btn-sm my-4 mx-4" onClick={handleConnection}>
-              {userAdd.substring(0, 4) +
-                "..." +
-                userAdd.substring(userAdd.length - 4, userAdd.length)}
-            </button>
+            <div>
+              <Link to="/get_register" class="btn btn-sm my-4 mx-4">
+                List the company
+              </Link>
+              <button class="btn btn-sm my-4 mx-4" onClick={handleConnection}>
+                {userAdd.substring(0, 4) +
+                  "..." +
+                  userAdd.substring(userAdd.length - 4, userAdd.length)}
+              </button>
+            </div>
           )}
         </div>
       </nav>
